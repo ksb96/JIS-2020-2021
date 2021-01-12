@@ -2,11 +2,12 @@
 
 title {
   text-align: center;
+  color: #fff;
 }
 
 body {
-  --background-c: hsl(210, 45%, 60%);
-  background-color: rgb(66, 120, 201);
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(2,0,36,1) 0%, rgba(2,0,36,1) 0%);
   display: flex;
   flex-direction: row;
   font-family: "Raleway", Helvetica, sans-serif;
@@ -20,19 +21,20 @@ body {
 
 h1 {
   margin-bottom: 5px;
+  background: rgb(2,0,36);
 }
 
 header {
   padding-bottom: 15px;
   position: fixed;
-  background-color: lightgray;
   width: 100%;
   z-index: 1;
   top: 0%;
 }
 
 main {
-  background-color: hsl(200, 60%, 100%);
+  background: rgb(2,0,36);
+  color: #fff;
   height: 100%;
   max-width: 900px;
   margin: auto;
@@ -74,12 +76,15 @@ main {
 
 #description {
   margin-top: 10px;
+  background-color: rgb(2,0,36);
+  color: #fff;
 }
 
 #survey-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(2,0,36);
 }
 
 #survey-fields {
@@ -87,6 +92,8 @@ main {
   margin-bottom: 10px;
   display: grid;
   grid-gap: 10px;
+  background-color: rgb(2,0,36);
+  color: #fff;
 }
 
 @media (max-width: 600px) {
@@ -150,6 +157,10 @@ fieldset label:hover {
   background-color: #fff;
   box-shadow: 0 0 4px #999;
   outline: none;
+}
+.footForm{
+  /* margin-top: 160px; */
+  padding: 1px !important;
 }
 
 /* Ripple effect - buttons */
