@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" author="hope">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Registration Form</title>
+
+<head>
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, shrink-to-fit=no, minimum-scale=1.0">
+	<!-- custom css -->
+		<!-- <link rel="stylesheet" href="./style/stylesheet.css" /> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<link rel="manifest" href="/2-Registration Form/manifest.json">
+	<link rel="service-worker" href="/2-Registration Form/sw.js" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="regForm">
+	<link rel = "icon" href = "./icons/Narula_Institute_of_Technology_logo.png" type = "image/icon"> 
+	<link rel="apple-touch-icon" href="./icons/favicon-16x16.png" sizes="16x16">
+	<link rel="apple-touch-icon" href="./icons/favicon-32x32.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="./icons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="./icons/android-chrome-512x512.png" sizes="512x512">
+	<meta name="msapplication-TileColor" content="#fff">
+	<meta name="theme-color" content="#3f51b5">
+	<script>
+		function REGISTRATION() {
+			var name = document.forms["RegForm"]["Name"];
+			var address = document.forms["RegForm"]["Current Address"];
+			var email = document.forms["RegForm"]["E-mail Address"];
+			var phone = document.forms["RegForm"]["Telephone"];
+
+
+
+
+			if (name.value == "") {
+				window.alert("Please enter your name.");
+				name.focus();
+				return false;
+			}
+
+			if (address.value == "") {
+				window.alert("Please enter your address.");
+				address.focus();
+				return false;
+			}
+
+			if (email.value == "") {
+				window.alert("Please enter a valid e-mail address.");
+				email.focus();
+				return false;
+			}
+
+			if (phone.value == "") {
+				window.alert("Please enter your telephone number.");
+				phone.focus();
+				return false;
+			}
+
+			return true;
+		}</script>
+</head>
+
+<body>
+	<script>
+		// Install ServiceWorker
+		if ('serviceWorker' in navigator) {
+			console.log('CLIENT: service worker registration in progress.');
+			navigator.serviceWorker.register('sw.js', { scope: ' ' }).then(function () {
+				console.log('CLIENT: service worker registration complete.');
+			}, function () {
+				console.log('CLIENT: service worker registration failure.');
+			});
+		} else {
+			console.log('CLIENT: service worker is not supported.');
+		}
+	</script>
+	<form name="RegForm" action="" onsubmit="return REGISTRATION()" method="post">
+
+
+		<div class="card bg-light">
+			<article class="card-body mx-auto" style="max-width: 500px;">
+				<h3 class="card-main-title text-center">JIS ENGINEERING COLLEAGE</h3>
+				<h4 class="card-title mt-3 text-center">Create Account</h4>
+
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fa fa-user icon"></i> </span>
+					</div>
+					<input name="Name" class="form-control" placeholder="Full Name" type="text">
+				</div>
+
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fa fa-address-card"></i></span>
+					</div>
+					<input name="Current Address" class="form-control" placeholder="Current Address" type="text">
+				</div>
+
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fa fa-envelope icon"></i> </span>
+					</div>
+					<input name="E-mail Address" class="form-control" placeholder="E-mail Address" type="text">
+				</div>
+
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fa fa-key icon"></i> </span>
+					</div>
+					<input type="Password" class="form-control" placeholder="Password" size="8" required>
+				</div>
+
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fa fa-mobile"></i> </span>
+					</div>
+					<select class="custom-select" style="max-width: 120px;">
+						<option selected="">+91</option>
+						<option value="1">+971</option>
+						<option value="2">+198</option>
+						<option value="3">+701</option>
+					</select>
+					<input class="form-control" placeholder="Telephone Number" type="number" size="10">
+				</div>
+
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fa fa-university"></i> </span>
+					</div>
+					<select class="form-control" placeholder="Select Your Course" type="text">
+						<option>BTECH</option>
+						<option>BBA</option>
+						<option>BCA</option>
+						<option>B.COM</option>
+						<option>M.COM</option>
+					</select>
+				</div>
+
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fa fa-sticky-note"></i> </span>
+					</div>
+					<textarea name="Comment" class="form-control" placeholder="Please write something!" type="text"
+						size="50"></textarea>
+				</div>
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-block"> Create Account </button>
+				</div>
+				<p class="text-center">Have an account? <a
+						href="E:\obb\others\git_projects\upload\FCC\JIS 2020-2021\3-Login\log.html">Log In</a> </p>
+
+				<input type="reset" value="Reset" name="Reset">
+				</p>
+	</form>
+	</article>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" author="hope">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Survey Form - JIS ENGINEERING COLLEAGE</title>
+  <head>
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, shrink-to-fit=no, minimum-scale=1.0">
+    <!-- custom css -->
+  <link rel="stylesheet" type="text/css" href="./style/survey-style.css">
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <link rel="manifest" href="/5-Survey Form/manifest.json"/>
+    <link rel="service-worker" href="/5-Survey Form/sw.js" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title">
+    <link rel = "icon" href = "./icons/survey-mainLogo.png" type = "image/icon"> 
+    <link rel="apple-touch-icon" href="./icons/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="./icons/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="./icons/android-icon-192x192.png" sizes="192x192">
+    <!-- <link rel="apple-touch-icon" href="./icons/survey-mainLogo.png" sizes="512x512"> -->
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="theme-color" content="#8D9CF4">
+</head>
+
+<body>
+  <script>
+		// Install ServiceWorker
+		if ('serviceWorker' in navigator) {
+			console.log('CLIENT: service worker registration in progress.');
+			navigator.serviceWorker.register('sw.js', { scope: ' ' }).then(function () {
+				console.log('CLIENT: service worker registration complete.');
+			}, function () {
+				console.log('CLIENT: service worker registration failure.');
+			});
+		} else {
+			console.log('CLIENT: service worker is not supported.');
+		}
+	</script>
+  <div class="container-fluid">
+  	<div class="row">
+  	<div class="col-sm-2"></div>
+  	<div class="col-sm-8">
+      <center><h1 id="title">Survey Form</h1></center>
+      <p id="description" class="title-text"><em style="font-size: 120%;">Let us know how we can improve</em></p>
+  
+  <main>
+    <form id="survey-form">
+      <section id="survey-fields">
+        <!-- identification fields -->
+        <label for="name" id="name-label">* Name:</label>
+        <input id="name" type="text" placeholder="Enter your name" required style="border-color: aliceblue;">
+        <label for="Email" id="email-label">* Email:</label>
+        <input id="email" type="email" placeholder="Enter your email" required style="border-color: aliceblue;">
+        <label for="number" id="number-label">* Age:</label>
+        <input id="number" type="number" placeholder="Enter your age" min=1 max=125 required style="border-color: aliceblue;">
+      
+        <!-- Which option best describes your current role -->
+        <label for="dropdown">Which option best describes your current role?</label>
+        <select id="dropdown" form="survey-form">
+          <option value="" disabled selected>Select an option</option>
+          <option value="student">Student</option>
+          <option value="full-time-job">Full-time</option>
+          <option value="full-time-learner">Part-time</option>
+        </select>
+      
+        <!-- How likely is that you would recommend freeCodeCamp to a friend -->
+        <label for="recommendation" class="lab">* How likely is that you would recommend JIS ENGINEERING COLLEAGE to a friend?</label>
+        <fieldset id="recommendation">
+          <label for="r_definitely"><input type="radio" name="recommend" class="radio" value="definitely" required>Definitely</label>
+          <label for="r_maybe"><input type="radio" name="recommend" class="radio" value="maybe" required>Maybe</label>
+          <label for="r_not_sure"><input type="radio" name="recommend" class="radio" value="notsure" required>Not sure</label>
+        </fieldset>
+        
+        <!-- What do you like most about our university -->
+        <label for="likethemost">What do you like most :</label>
+        <select id="likethemost">
+          <option value="" disabled selected>Select an option</option>
+          <option value="challenges">Opportunity's</option>
+          <option value="projects">Teaching Staff</option>
+          <option value="community">Study Culture</option>
+          <option value="open-source">Management</option>
+        </select>
+      
+        <!-- Things that should be improved in the future -->
+        <label for="improvements" class="improveLabel"><strong>Things that should be improved in the future:</strong> </label>
+        <legend>(Check all that apply)</legend>
+        <fieldset id="improvements"><label><input type="checkbox" class="improveLabelSub">  Teaching Quality</label></fieldset>
+        <fieldset id="improvements"><label><input type="checkbox" class="improveLabelSub" >  Library</label></fieldset>
+        <fieldset id="improvements"><label><input type="checkbox" class="improveLabelSub">  Class Accomodation</label></fieldset>
+        <fieldset id="improvements"><label><input type="checkbox"class="improveLabelSub">  More Open-Source Projects</label></fieldset>
+        <fieldset id="improvements"><label><input type="checkbox"class="improveLabelSub">  More Seminar</label></fieldset>
+        <fieldset id="improvements"><label><input type="checkbox" class="improveLabelSub">  Student Help-Desk</label></fieldset>
+        <fieldset id="improvements"><label><input type="checkbox" class="improveLabelSub">  Additional Courses</label></fieldset>
+        
+       
+        <!-- Any Comments or Suggestions -->
+        <label class="suggestion">Any Comments or Suggestions ?</label>
+        <textarea style="height:50px;resize:vertical;" id="comments" placeholder="Please enter your comments" style="border-color: aliceblue;"></textarea>
+      </section>
+
+      <!-- btns -->
+      <button class="submit">Submit</button><br>
+      <button class="reset">Reset</button>
+    </form>
+  </main>
+</div>
+</div>
+ </div>
+ 
+</body>
+
+  </html>
+
+
+

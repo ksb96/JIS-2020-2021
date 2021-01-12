@@ -1,0 +1,19 @@
+<mvc:View controllerName="PWAApplication.PWAApplication.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+					
+					<html:main class="camera">
+							<html:canvas class="camera--sensor"></html:canvas>
+							<html:video class="camera--view"></html:video>
+							<html:img src="//:0" alt="" class="camera--output"/>
+							<html:button class="camera--trigger">Take a picture</html:button>
+						</html:main>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

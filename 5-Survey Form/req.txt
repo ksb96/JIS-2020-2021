@@ -1,0 +1,5 @@
+1) into | 3 folders ---- 2 , 4, 5  -----> store data(offline) ~~ indexedDB
+
+2) firebase | backend  or heroku (RnD)
+
+3) hosting ~~~~ firebase|git|heroku(RnD)

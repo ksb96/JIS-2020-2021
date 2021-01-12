@@ -1,0 +1,35 @@
+{
+    "name": "Login Page",
+    "short_name": "login",
+    "icons": [
+      {
+        "src": "",
+        "type": "image/png",
+        "sizes": ""
+      },
+      {
+        "src": "",
+        "type": "image/png",
+        "sizes": ""
+      },
+      {
+        "src": "",
+        "type": "image/png",
+        "sizes": ""
+      },
+      {
+        "src": "",
+        "type": "image/png",
+        "sizes": ""
+      }
+    ],
+    "start_url": "/3-Login/log.html",
+    "scope": ".",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#fff",
+    "theme_color": "#3f51b5",
+    "description": "Login page",
+    "dir": "ltr",
+    "lang": "en-US"
+  }

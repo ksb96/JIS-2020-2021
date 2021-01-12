@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admission Form ~ JIS University</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Manifest/SW related -->
+    <link rel="manifest" href="/4-Submission-Form/manifest.json">
+	<link rel="service-worker" href="/4-Submission-Form/sw.js" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="submission">
+    <link rel = "icon" href = "./icons/android-chrome-192x192.png" type = "image/icon"> 
+	<link rel="apple-touch-icon" href="./icons/preview_16x16.png" sizes="16x16">
+	<link rel="apple-touch-icon" href="./icons/preview_32x32.png" sizes="32x32">
+	<meta name="msapplication-TileColor" content="#fff">
+	<meta name="theme-color" content="#3f51b5">
+</head>
+<body>
+    <script>
+		// Install ServiceWorker
+		if ('serviceWorker' in navigator) {
+			console.log('CLIENT: service worker registration in progress.');
+			navigator.serviceWorker.register('sw.js', { scope: ' ' }).then(function () {
+				console.log('CLIENT: service worker registration complete.');
+			}, function () {
+				console.log('CLIENT: service worker registration failure.');
+			});
+		} else {
+			console.log('CLIENT: service worker is not supported.');
+		}
+	</script>
+
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="images/signup-img.jpg" alt="">
+                </div>
+                <div class="signup-form">
+                    <form method="POST" class="register-form" id="register-form">
+                        <h2>Student Registration Form</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name :</label>
+                                <input type="text" name="name" id="name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="father_name">Father Name :</label>
+                                <input type="text" name="father_name" id="father_name" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address :</label>
+                            <input type="text" name="address" id="address" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode :</label>
+                            <input type="text" name="pincode" id="pincode">
+                        </div>
+                        <div class="form-radio">
+                            <label for="gender" class="radio-label">Gender :</label>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="male" checked>
+                                <label for="male">Male</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="female">
+                                <label for="female">Female</label>
+                                <span class="check"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">State :</label>
+                                <div class="form-select">
+                                    <select name="state" id="state">
+                                        <option value="ap">Andhra Pradesh</option>
+                                        <option value="app">Arunachal Pradesh</option>
+                                        <option value="ass">Assam</option>
+                                        <option value="bh">Bihar</option>
+                                        <option value="cht">Chhattisgarh</option>
+                                        <option value="go">Goa</option>
+                                        <option value="guj">Gujarat</option>
+                                        <option value="hry">Haryana</option>
+                                        <option value="hp">Himachal Pradesh</option>
+                                        <option value="jhk">Jharkhand</option>
+                                        <option value="kr">Karnataka</option>
+                                        <option value="krl">Kerala</option>
+                                        <option value="mp">Madhya Pradesh</option>
+                                        <option value="mh">Maharashtra</option>
+                                        <option value="man">Manipur</option>
+                                        <option value="meg">Meghalaya</option>
+                                        <option value="mz">Mizoram</option>
+                                        <option value="ng">Nagaland</option>
+                                        <option value="od">Odisha</option>
+                                        <option value="pj">Punjab</option>
+                                        <option value="raj">Rajasthan</option>
+                                        <option value="sk">Sikkim</option>
+                                        <option value="tn">Tamil Nadu</option>
+                                        <option value="tel">Telangana</option>
+                                        <option value="trp">Tripura</option>
+                                        <option value="up">Uttar Pradesh</option>
+                                        <option value="utk">Uttarakhand</option>
+                                        <option value="wb">West Bengal</option>
+                                        </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City :</label>
+                                <div class="form-select">
+                                    <select name="city" id="city">
+                                        <option value="">Amaravati</option>
+                                        <option value="">Itanagar</option>
+                                        <option value="">Dispur</option>
+                                        <option value="">Patna</option>
+                                        <option value="">Raipur</option>
+                                        <option value="">Panaji</option>
+                                        <option value="">Gandhinagar</option>
+                                        <option value="">Chandigarh</option>
+                                        <option value="">Shimla</option>
+                                        <option value="">Ranchi</option>
+                                        <option value="">Bengaluru </option>
+                                        <option value="">Mumbai</option>
+                                        <option value="">Thiruvananthapuram</option>
+                                        <option value="">Bhopal</option>
+                                        <option value="">Imphal</option>
+                                        <option value="">Shillong</option>
+                                        <option value="">Aizawl</option>
+                                        <option value="">Kohima</option>
+                                        <option value="">Bhubaneswar</option>
+                                        <option value="">Chandigarh</option>
+                                        <option value="">Jaipur</option>
+                                        <option value="">Gangtok</option>
+                                        <option value="">Chennai</option>
+                                        <option value="">Hyderabad</option>
+                                        <option value="">Agartala</option>
+                                        <option value="">Lucknow</option>
+                                        <option value="">Dehradun</option>
+                                        <option value="">Gairsain </option>
+                                        <option value="">Kolkata</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="birth_date">DOB (dd/mm/yyyy) :</label>
+                            <input type="text" name="birth_date" id="birth_date">
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Mobile Number :</label>
+                            <input type="number" name="nos" id="nos">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email ID :</label>
+                            <input type="email" name="email" id="email" />
+                        </div>
+                        <form action="">
+                            <div class="form-group">
+                                <label id="info" for="file">Academic Information (Marksheet/s) :</label>
+                                <h3>10th</h3>
+                                <input type="file" id="myfile" name="myfile"><br>
+                                <h3>12th</h3>
+                                <input type="file" id="myfile" name="myfile"><br>
+                            </div>
+                            <div class="form-radio">
+                            <label id="select" for="select">Please select your course :</label>
+                            <div class="form-radio-item">
+                                    <input type="radio" name="gender" id="male" checked>
+                                    <label for="male">Full - time</label>
+                                    <span class="check"></span>
+                                </div>
+                        
+                                <div class="form-radio-item">
+                                    <input type="radio" name="gender" id="female">
+                                    <label for="female">Distance</label>
+                                    <span class="check"></span>
+                                </div>
+                            </div><br>
+
+                            <div class="form-group">
+                                <label for="course">Select Course's :</label>
+                                <div class="form-select">
+                                    <select name="course" id="course">
+                                        <!-- <option></option> -->
+                                        <option>Computer Science (CSE)</option>
+                                        <option>Information & Technology (IT)</option>
+                                        <option>Electronics & Telecommunication (ECE)</option>
+                                        <option>Electronics & Instrumentation (EIE)</option>
+                                        <option>Mechanical Engineering (ME)</option>
+                                        <option>Civil Engineering (CE)</option>
+
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>    
+                            <div class="form-submit">
+                                <input type="submit" value="Reset All" class="submit" name="reset" id="reset" />
+                                <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+                            </div>
+                            </form>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!-- JS -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+    </html>
+                        
+                        
+                        
+
+
+

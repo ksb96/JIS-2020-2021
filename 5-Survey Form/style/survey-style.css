@@ -1,0 +1,186 @@
+@import url(https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap);
+
+title {
+  text-align: center;
+}
+
+body {
+  --background-c: hsl(210, 45%, 60%);
+  background-color: rgb(66, 120, 201);
+  display: flex;
+  flex-direction: row;
+  font-family: "Raleway", Helvetica, sans-serif;
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+header {
+  padding-bottom: 15px;
+  position: fixed;
+  background-color: lightgray;
+  width: 100%;
+  z-index: 1;
+  top: 0%;
+}
+
+main {
+  background-color: hsl(200, 60%, 100%);
+  height: 100%;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 80px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  position: relative;
+  top: 80px;
+}
+
+.lab {
+  margin-top: 20px;
+}
+
+.improveLabel {
+  margin-top: inherit;
+}
+
+.improveLabelSub {
+  justify-content: center;
+}
+
+.radio {
+  margin: 5px;
+  margin-left: 10px;
+}
+
+@media (max-width: 400px) {
+  main {
+    top: 65px;
+  }
+}
+
+.title-text {
+  margin: auto;
+  margin-top: -5px;
+  text-align: center;
+}
+
+#description {
+  margin-top: 10px;
+}
+
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#survey-fields {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-gap: 10px;
+}
+
+@media (max-width: 600px) {
+  #survey-fields {
+    grid-template-columns: 1fr;
+  }
+
+  label {
+    text-align: left;
+  }
+}
+
+@media (min-width: 600px) {
+  #survey-fields {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  label {
+    text-align: right;
+  }
+}
+
+fieldset {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  border: 0;
+  min-width: 100%;
+}
+
+fieldset label:hover {
+  font-weight: bold;
+}
+/* suggestion box */
+.suggestion {
+  margin-top: 20px;
+}
+
+/* buttons */
+.submit {
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  background-color: #2196f3;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+}
+
+.reset {
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #000;
+  background-color: #fff;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+}
+
+/* Ripple effect - buttons */
+/* submit */
+.submit {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.submit:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+
+.submit:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/* reset */
+.reset {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.reset:hover {
+  background: #B2B4CC radial-gradient(circle, transparent 1%, #B2B4CC 1%) center/15000%;
+}
+
+.reset:active {
+  background-color: #B2B4CC;
+  background-size: 100%;
+  transition: background 0s;
+}

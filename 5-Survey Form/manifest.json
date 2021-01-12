@@ -1,0 +1,30 @@
+{
+    "name": "Survey Form",
+    "short_name": "survey",
+    "icons": [
+      {
+        "src": "./icons/favicon-16x16.png",
+        "type": "image/png",
+        "sizes": "16x16"
+      },
+      {
+        "src": "./icons/favicon-32x32.png",
+        "type": "image/png",
+        "sizes": "32x32"
+      },
+      {
+        "src": "./icons/android-icon-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "/5-Survey Form/survey.html",
+    "scope": ".",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#fff",
+    "theme_color": "#8D9CF4",
+    "description": "A Survey app",
+    "dir": "ltr",
+    "lang": "en-US"
+  }
