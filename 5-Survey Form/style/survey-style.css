@@ -159,7 +159,8 @@ fieldset label:hover {
   outline: none;
 }
 .footForm{
-  /* margin-top: 160px; */
+  color: #fff;
+  margin-top: 160px;
   padding: 1px !important;
 }
 
