@@ -409,6 +409,8 @@ select {
   padding-top: 27px; }
 
 .submit {
+  background: #5bc0de;
+  color: #fff; 
   width: 140px;
   height: 40px;
   display: inline-block;
@@ -417,31 +419,30 @@ select {
   font-size: 13px;
   padding: 10px;
   border: none;
-  cursor: pointer; }
+  cursor: pointer; 
+}
+.submit:hover {
+  background-color: #357ebd; 
+}
 
-#reset {
-  background: #f8f8f8;
-  color: #999;
-  margin-right: 8px; }
-  #reset:hover {
-    background: #ff6801;
-    color: #fff; }
-
-#submit {
-  background: #5bc0de;
-  color: #fff; }
-  #submit:hover {
-    background-color: #357ebd; }
+  .reset {
+    background: #b00;
+    color: #fff;
+    width: 140px;
+    height: 40px;
+    display: inline-block;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 13px;
+    padding: 10px;
+    border: none;
+    cursor: pointer; 
+    margin-top: 5px;
+}
 
 #footer{
   text-justify: auto;
 }    
-
-/* #para{
-  color: #0008ff;
-  margin-top: auto;
-  margin-bottom: auto;
-} */
 
 @media screen and (max-width: 992px) {
   .container {
@@ -494,4 +495,3 @@ select {
     margin-right: 0px;
     margin-bottom: 10px; } }
 
-/*# sourceMappingURL=style.css.map */

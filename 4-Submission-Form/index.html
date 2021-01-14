@@ -21,8 +21,20 @@
 	<link rel="apple-touch-icon" href="./icons/preview_16x16.png" sizes="16x16">
 	<link rel="apple-touch-icon" href="./icons/preview_32x32.png" sizes="32x32">
 	<meta name="msapplication-TileColor" content="#fff">
-	<meta name="theme-color" content="#3f51b5">
+    <meta name="theme-color" content="#3f51b5">
+    <!-- Check IndexedDB supports in your browser -->
+    <script type="text/javascript" id="indexDB">
+        window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+        window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
+        window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange
+     
+        if (!window.indexedDB) {
+        window.alert("Your browser doesn't support a stable version of IndexedDB.")
+        }
+    </script>
+
 </head>
+
 <body>
     <script>
 		// Install ServiceWorker
@@ -36,8 +48,7 @@
 		} else {
 			console.log('CLIENT: service worker is not supported.');
 		}
-	</script>
-
+    </script>
     <div class="main">
         <div class="container">
             <div class="signup-content">
@@ -205,8 +216,9 @@
                                 </div>
                             </div>    
                             <div class="form-submit">
-                                <input type="submit" value="Reset All" class="submit" name="reset" id="reset" />
-                                <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+                                <button type="submit" class="submit" onclick="submit()" >Submit</button>
+                                <button type="reset" class="reset" onclick="reset()" >Reset</button>
+
                             </div>
                             </form>
                         </form>
