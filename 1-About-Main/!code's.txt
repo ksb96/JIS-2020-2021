@@ -1,0 +1,46 @@
+  //navbar -- hamburger
+  <div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://nit.ac.in/#popup" target="_blank">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="E:\obb\others\git_projects\upload\FCC\JIS 2020-2021\1-About-Main\Gallery.html"
+              target="_blank">Gallery</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://nit.ac.in/student-chapter.php" target="_blank">Campus Life</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://nit.ac.in/courses-offered.php" target="_blank">Admission</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://nit.ac.in/academic-calendar.php" target="_blank">Academics</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://sites.google.com/site/narulatnp/" target="_blank">Training & Placement</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://nit.ac.in/model-class-room.php" target="_blank">Infrastructure</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://nit.ac.in/student-chapter.php" target="_blank">Student Life</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://nit.ac.in/anti-ragging.php" target="_blank">Anti-Ragging</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://nit.ac.in/anti-ragging.php" target="_blank">Councelling</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://sites.google.com/view/nitalumni" target="_blank">Alumni</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://nit.ac.in/pdf/Application-form-2015.pdf" target="_blank">Downloads</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.jiscollege.ac.in/pdf/admissionoverview.pdf" target="_blank">Fee Structure</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="E:\obb\others\git_projects\upload\FCC\JIS 2020-2021\2-Registration Form\reg.html"
+              target="_blank"> Sign Up</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="E:\obb\others\git_projects\upload\FCC\JIS 2020-2021\3-Login\log.html" target="_blank">Login</a></li>
+      </ul> 
+      </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </div>
