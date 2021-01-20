@@ -1,28 +1,6 @@
 {
     "name": "Login Page",
     "short_name": "login",
-    "icons": [
-      {
-        "src": "",
-        "type": "image/png",
-        "sizes": ""
-      },
-      {
-        "src": "",
-        "type": "image/png",
-        "sizes": ""
-      },
-      {
-        "src": "",
-        "type": "image/png",
-        "sizes": ""
-      },
-      {
-        "src": "",
-        "type": "image/png",
-        "sizes": ""
-      }
-    ],
     "start_url": "/3-Login/log.html",
     "scope": ".",
     "display": "standalone",
